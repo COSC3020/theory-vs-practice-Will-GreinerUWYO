@@ -3,28 +3,29 @@
 - List 3 reasons why asymptotic analysis may be misleading with respect to
   actual performance in practice.
 
-  Asymptotics generally drops things like constants, as can be seen in the previous Divide and Conquer Sum answer for complexity.
-  Asymptotics gives broad general answers for runtime questions, but doesn't accurately portray exact times, only giving general ranges. As runtime is not the same as complexity.
-  Asymptotics considers only the theoretical runtimes of the algorithm on an empty and perfect machine, not taking into account other running programs or hardware differences.
+  Asymptotics drops constants and lower order terms because asymptotics is focused on the big picture. As n gets larger and larger, lower order terms and exponents matter less, so when using asymptotics, we only need to care about the high order terms even though lower order terms have an impact on actual runtime with smaller values of n.
+  Asymptotics only gives general bounds for runtimes, as asymptotics provides answers as n gets infinitely large, meaning that could be a large difference in runtimes between two programs who both have the same asymptotic expression
+  Asymptotics considers only the theoretical runtimes of the algorithm in a ideal system without taking into account external factors. Memory issues, computational issues, factors intrinsic to the programming, or a machine which cannot handle the code would perform worse than the asymptotic expression would suggest.
 
 - Suppose finding a particular element in a binary search tree with 1,000
   elements takes 5 seconds. Given what you know about the asymptotic complexity
   of search in a binary search tree, how long would you guess finding the same
   element in a search tree with 10,000 elements takes? Explain your reasoning.
 
-  Since a binary search tree has a worst-case complexity of O(n), then finding the same element in a search tree with ten times as many elements should be a constant ten bigger, making the time to coomplete the 10,000 element search 50 seconds.
+  Since a binary search tree has a complexity of O(log(n)), so finding an element in a tree with 1,000 elements takes 5 seconds, or 1.6 * log(1000) = 5 seconds.
+   Which would mean that finding an element in a binary search tree with 10,0000 elements would take 1.6 * log(10,000) = 6.4 seconds.
 
 - You measure the time with 10,000 elements and it takes 100 seconds! List 3
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
 
-  This program could have been run while the machine was running different programs, leading to a massive slowdown and causing the program to take far longer than expected to complete.
-  The constants used for calculation that are dropped for complexity may have a larger effect on larger sets of numbers, leading to a longer runtime.
-  The program could be a less efficient version of the code expected, leading to increases in runtime that get exasperated with larger datasets.
+  The constants used for calculation that are dropped for complexity may have a larger effect with a larger set of input data, which would be less important on a smaller tree, but could account for the time difference.
+  There could be various real-world issues like memory issues, CPU issues, or one of any number of bottlenecks or resource allocations in the machine that cause the program to run much slower.
+  The O(log(n)) complexity assumes a balanced tree. If the tree is unbalanced, it could be as bad as O(n), which would account for the different time.
   
 Add your answers to this markdown file.
 
 I used this link to help with the misleading question: https://www.geeksforgeeks.org/asymptotic-notation-and-analysis-based-on-input-size-of-algorithms/ 
-Got the complexity of the binary search tree from this link: https://www.geeksforgeeks.org/complexity-different-operations-binary-tree-binary-search-tree-avl-tree/
+Got the complexity of the binary search tree from this link: https://testbook.com/maths/binary-search-tree#:~:text=In%20a%20balanced%20BST%2C%20the,and%20proceed%20left%20or%20right.
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
