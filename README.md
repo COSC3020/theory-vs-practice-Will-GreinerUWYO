@@ -4,7 +4,9 @@
   actual performance in practice.
 
   Asymptotics drops constants and lower order terms because asymptotics is focused on growth rate. As n approachs infinity, lower order terms and exponents matter less, so when using asymptotics, we only need to care about the high order terms even though lower order terms have an impact on actual runtime with smaller values of n.
+  
   Asymptotics only gives general bounds for runtimes, as asymptotics provides answers as n approachs infinity, meaning that could be a large difference in runtimes between two programs who both have the same asymptotic expression.
+
   Asymptotics considers only the theoretical runtimes of the algorithm in a ideal system without taking into account external factors. Memory issues, computational issues, factors intrinsic to the programming, or a machine which cannot handle the code would perform worse than the asymptotic expression would suggest.
 
 - Suppose finding a particular element in a binary search tree with 1,000
@@ -19,9 +21,11 @@
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
 
-  The constants used for calculation that are dropped for complexity still have an effect, but which is variant on the size of the data set. For example, given a constant 5, for a dataset of 1,000 the effect is 5,000, while for a dataset of 1,000,000, the effect is 5,000,000. Therefore the effect will scale with the size of the data set, making larger datasets take longer to compute.
+  The two datasets may have simply been run on different machines. The difference in hardware between the two machines is crucial to runtimes. The first machine could have had a faster processor, more memory, or less background programs which could all have made a program run faster than on a secondary machine which has a slower processor, less memory, and more background programs which all would greatly reduce the speed of the program.
+  
   There could be various real-world issues like memory issues, CPU issues, or one of any number of bottlenecks or resource allocations in the machine that cause the program to run much slower. For example, a computer might be bottlenecked by using another program or function at the same time, which might limit access to memory, which might be impacting the larger 10,000 element tree more than the smaller 1,000 element tree as memory and resource needs increase.
-  The optimization of a function may be an issue here. Theoretical complexity assumes good optimization, but a poorly optimized program may take extra time to carry out each operation, therefore increasing the amount of time drastically when applied to a larger data set. While this does apply to a smaller dataset, the effect is less noticeable, as if an optimal function takes 2 seconds per operation, where an unoptimal one takes 3 seconds per operation, for a dataset of 1,000 it takes 1,000 extra seconds, but for a dataset of 1,000,000 it takes an extra 1,000,000 seconds.
+  
+  The optimization of a function may be an issue here. The complexity in part two and the given runtimes are calculated using assumed optimization and efficacy, but a poorly optimized or ineffective program will become slower. While this does apply to a smaller dataset, the effect is less noticeable, especially if we assume best-case scenario in the smaller tree, and a worst case in the larger tree. Worst cases would make the poorly optimized program even worse, leading to longer runtimes. If the code is ineffective and the smaller tree is not the worst case, the larger tree could exasperate problems found in the code and lead to the longer runtime.
   
 Add your answers to this markdown file.
 
