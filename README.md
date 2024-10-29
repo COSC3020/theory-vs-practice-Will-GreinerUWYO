@@ -32,6 +32,6 @@ Add your answers to this markdown file.
 I used this link to help with the misleading question: https://www.geeksforgeeks.org/asymptotic-notation-and-analysis-based-on-input-size-of-algorithms/ 
 Got the complexity of the binary search tree from this link: https://testbook.com/maths/binary-search-tree#:~:text=In%20a%20balanced%20BST%2C%20the,and%20proceed%20left%20or%20right.
 
-Worked with Michael Stoll to clean up my usage of terms.
+Worked with Michael Stoll to clean up my usage of terms. Talked to Lily Brongo about other options.
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
