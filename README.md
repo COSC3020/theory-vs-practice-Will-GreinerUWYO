@@ -19,9 +19,9 @@
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
 
-  The constants used for calculation that are dropped for complexity still have an effect, which is greater when applied to a larger data set, and therefore more noticeable.
+  The constants used for calculation that are dropped for complexity still have an effect, but which is variant on the size of the data set. For example, given a constant 5, for a dataset of 1,000 the effect is 5,000, while for a dataset of 1,000,000, the effect is 5,000,000. Therefore the effect will scale with the size of the data set, making larger datasets take longer to compute.
   There could be various real-world issues like memory issues, CPU issues, or one of any number of bottlenecks or resource allocations in the machine that cause the program to run much slower. For example, a computer might be bottlenecked by using another program or function at the same time, which might limit access to memory, which might be impacting the larger 10,000 element tree more than the smaller 1,000 element tree as memory and resource needs increase.
-  The optimization of a function may be an issue here. Theoretical complexity assumes good optimization, but a poorly optimized program may take extra time to carry out each operation, therefore increasing the amount of time drastically when applied to a larger data set.
+  The optimization of a function may be an issue here. Theoretical complexity assumes good optimization, but a poorly optimized program may take extra time to carry out each operation, therefore increasing the amount of time drastically when applied to a larger data set. While this does apply to a smaller dataset, the effect is less noticeable, as if an optimal function takes 2 seconds per operation, where an unoptimal one takes 3 seconds per operation, for a dataset of 1,000 it takes 1,000 extra seconds, but for a dataset of 1,000,000 it takes an extra 1,000,000 seconds.
   
 Add your answers to this markdown file.
 
